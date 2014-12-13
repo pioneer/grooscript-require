@@ -1,0 +1,9 @@
+plugins {
+  id "org.grooscript.conversion" version "0.7"
+}
+
+grooscript {
+  source = ['src/main/groovy',
+            'src/main/groovy/ui'] // do we need this second line??? wouldn't it be easier to just put root folder here?
+  entryPoint = 'main' // this means that src/main/groovy/main.groovy will be wrapped into require() instead of define(), can be ommited maybe if it's a reasonable default
+}
